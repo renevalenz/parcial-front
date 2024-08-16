@@ -1,4 +1,5 @@
-import styles from "../Card.module.css";
+import PropTypes from 'prop-types'; 
+import styles from '../Card.module.css';
 
 const Card = ({ email, password }) => {
   return (
@@ -16,6 +17,12 @@ const Card = ({ email, password }) => {
       </div>
     </div>
   );
+};
+
+
+Card.propTypes = {
+  email: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
 };
 
 export default Card;
